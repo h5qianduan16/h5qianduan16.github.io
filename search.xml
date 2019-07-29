@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>canvas绘图</title>
-      <link href="/2019/07/30/canvas%E7%BB%98%E5%9B%BE/"/>
-      <url>/2019/07/30/canvas%E7%BB%98%E5%9B%BE/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>#canvas的使用</p><p>1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是<code>width=&#39;600&#39; height=&#39;600&#39;</code>这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;你的浏览器不支持，请升级浏览器&lt;/canvas&gt;</span><br></pre></td></tr></table></figure><p>2.在script中获取canvas元素，并设置为2d画布。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&apos;canvas&apos;)</span><br><span class="line">var ctx = canvas.getContext(&apos;2d&apos;)</span><br></pre></td></tr></table></figure><p>3.在canvas中线条需要一个起始点和终点，还需要连接起来才成为一条线，下面的例子是平行和交叉。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ctx.strokeStyle=&apos;red&apos;</span><br><span class="line">        //平行线</span><br><span class="line">        ctx.moveTo(50, 50.5);</span><br><span class="line">        ctx.lineTo(200, 50.5)</span><br><span class="line">        ctx.moveTo(50, 80.5);</span><br><span class="line">        ctx.lineTo(200, 80.5);</span><br><span class="line">        ctx.stroke()</span><br><span class="line">        ctx.beginPath()</span><br><span class="line">        //交叉线</span><br><span class="line">        ctx.moveTo(50, 100.5);</span><br><span class="line">        ctx.lineTo(200, 110.5);</span><br><span class="line">        ctx.moveTo(50, 110.5);</span><br><span class="line">        ctx.lineTo(200, 100.5);</span><br><span class="line">        ctx.strokeStyle=&apos;blue&apos;</span><br><span class="line">        ctx.stroke()</span><br></pre></td></tr></table></figure><p>效果图</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[canvas绘图]]></title>
+    <url>%2F2019%2F07%2F30%2Fcanvas%2F</url>
+    <content type="text"><![CDATA[#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&#39;600&#39; height=&#39;600&#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;你的浏览器不支持，请升级浏览器&lt;/canvas&gt; 2.在script中获取canvas元素，并设置为2d画布。 12var canvas = document.getElementById(&apos;canvas&apos;)var ctx = canvas.getContext(&apos;2d&apos;) 3.在canvas中线条需要一个起始点和终点，还需要连接起来才成为一条线，下面的例子是平行和交叉。 123456789101112131415ctx.strokeStyle=&apos;red&apos; //平行线 ctx.moveTo(50, 50.5); ctx.lineTo(200, 50.5) ctx.moveTo(50, 80.5); ctx.lineTo(200, 80.5); ctx.stroke() ctx.beginPath() //交叉线 ctx.moveTo(50, 100.5); ctx.lineTo(200, 110.5); ctx.moveTo(50, 110.5); ctx.lineTo(200, 100.5); ctx.strokeStyle=&apos;blue&apos; ctx.stroke() 效果图]]></content>
+  </entry>
 </search>
