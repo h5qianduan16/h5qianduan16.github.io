@@ -103,7 +103,7 @@
 <meta property="og:description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://h5qianduan16.github.io/2019/07/30/canvas/Snipaste.jpg">
-<meta property="og:updated_time" content="2019-07-30T01:31:31.337Z">
+<meta property="og:updated_time" content="2019-07-30T02:08:22.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas绘图">
 <meta name="twitter:description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400">
@@ -374,6 +374,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ctx.fillRect(item.x-m/<span class="number">2</span>,item.y,m,y-item.y)</span><br><span class="line">ctx.strokeRect(x,y,w,h)</span><br></pre></td></tr></table></figure>
 
 <p>第一种办法是创建四个坐标点连线。第二种就是使用strokeRect()方法有四个参数，前两个是矩形左上角的坐标值（矩形的绘画是以左上角为原点）<br>后两个参数是矩形的宽高。通过fillRect（）同样可以绘制矩形，这种是具有填充色的矩形，与fill（）的相似。</p>
+<p>#总结<br>1.canvas 1px问题，坐标轴位置渲染时，以给出的坐标值为中心，向两边平分，因此给出的坐标最好加0.5，解决1px和2px看起来一样。</p>
+<p>2.兼容性问题，在canvas中写出提示。</p>
+<p>3.canvas有两套宽高，一个是标签的宽高，一个是画布的宽高；样式的宽高只改变标签的宽高，画布宽高不变；若要都改变，需要在标签内部设置宽高属性，切记不是内联样式。</p>
 
       
     </div>
@@ -392,7 +395,7 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
   <p><span>文章作者:</span><a href="/" title="访问 mark 的个人博客">mark</a></p>
-  <p><span>最后更新:</span>2019年07月30日 09:07:31</p>
+  <p><span>最后更新:</span>2019年07月30日 10:07:22</p>
   <p><span>原始链接:</span><a href="/2019/07/30/canvas/" title="canvas绘图">http://h5qianduan16.github.io/2019/07/30/canvas/</a></p>
   <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"> BY-NC-SA 3.0 许可协议</a>，转载请注明出处！</p>
 </div>
