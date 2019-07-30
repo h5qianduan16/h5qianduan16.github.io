@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>canvas绘制圆</title>
+      <link href="/2019/07/30/canvas%E7%BB%98%E5%88%B6%E5%9C%86/"/>
+      <url>/2019/07/30/canvas%E7%BB%98%E5%88%B6%E5%9C%86/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>#canvas画圆</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取到canvas画布的dom对象</span></span><br><span class="line">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 获取上下文（工具库）</span></span><br><span class="line">  <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line"></span><br><span class="line">  ctx.arc(<span class="number">200</span>, <span class="number">200</span>,<span class="number">50</span>, <span class="number">0</span>, <span class="built_in">Math</span>.PI,<span class="literal">false</span>)</span><br><span class="line">  ctx.stroke()</span><br><span class="line">  ctx.beginPath()</span><br><span class="line">  </span><br><span class="line">  ctx.arc(<span class="number">400</span>,<span class="number">200</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>)</span><br><span class="line">  ctx.stroke()</span><br></pre></td></tr></table></figure><p>使用arc()方法来绘制圆，参数分别是：圆心坐标，半径，开始弧度位置，结束弧度位置，顺逆时针。false顺时针。效果图</p><img src="/2019/07/30/canvas绘制圆/圆.jpg" title="圆和半圆">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>canvas绘图</title>
       <link href="/2019/07/30/canvas/"/>
       <url>/2019/07/30/canvas/</url>
