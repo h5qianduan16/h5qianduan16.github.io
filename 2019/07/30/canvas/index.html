@@ -94,20 +94,20 @@
 
 
 
-<meta name="description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&amp;quot;canvas&amp;quot; width=&amp;quot;6">
+<meta name="description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400">
 <meta name="keywords" content="前端基础知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="canvas绘图">
 <meta property="og:url" content="http://h5qianduan16.github.io/2019/07/30/canvas/index.html">
 <meta property="og:site_name" content="菜鸟的一生">
-<meta property="og:description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&amp;quot;canvas&amp;quot; width=&amp;quot;6">
+<meta property="og:description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://h5qianduan16.github.io/.git//07/30/canvas/pingxing.png">
-<meta property="og:updated_time" content="2019-07-29T14:06:25.872Z">
+<meta property="og:image" content="http://h5qianduan16.github.io/2019/07/30/canvas/Snipaste.jpg">
+<meta property="og:updated_time" content="2019-07-30T01:02:16.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas绘图">
-<meta name="twitter:description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&amp;quot;canvas&amp;quot; width=&amp;quot;6">
-<meta name="twitter:image" content="http://h5qianduan16.github.io/.git//07/30/canvas/pingxing.png">
+<meta name="twitter:description" content="#canvas的使用 1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是width=&amp;#39;600&amp;#39; height=&amp;#39;600&amp;#39;这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。 1&amp;lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400">
+<meta name="twitter:image" content="http://h5qianduan16.github.io/2019/07/30/canvas/Snipaste.jpg">
 
 
 
@@ -354,16 +354,23 @@
       
         <p>#canvas的使用</p>
 <p>1.首先创建一个canvas标签，添加一个id“canvas”，添加宽高属性，切记不是行内样式，直接是<code>width=&#39;600&#39; height=&#39;600&#39;</code>这样创建出的canvas标签的宽高与canvas画布的宽高一致，就不会导致出现鼠标与绘画点出现偏差。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;你的浏览器不支持，请升级浏览器&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"400"</span>&gt;</span>你的浏览器不支持，请升级浏览器<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>2.在script中获取canvas元素，并设置为2d画布。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&apos;canvas&apos;)</span><br><span class="line">var ctx = canvas.getContext(&apos;2d&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>)</span><br><span class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>)</span><br></pre></td></tr></table></figure>
 
 <p>3.在canvas中线条需要一个起始点和终点，还需要连接起来才成为一条线，下面的例子是平行和交叉。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ctx.strokeStyle=&apos;red&apos;</span><br><span class="line">        //平行线</span><br><span class="line">        ctx.moveTo(50, 50.5);</span><br><span class="line">        ctx.lineTo(200, 50.5)</span><br><span class="line">        ctx.moveTo(50, 80.5);</span><br><span class="line">        ctx.lineTo(200, 80.5);</span><br><span class="line">        ctx.stroke()</span><br><span class="line">        ctx.beginPath()</span><br><span class="line">        //交叉线</span><br><span class="line">        ctx.moveTo(50, 100.5);</span><br><span class="line">        ctx.lineTo(200, 110.5);</span><br><span class="line">        ctx.moveTo(50, 110.5);</span><br><span class="line">        ctx.lineTo(200, 100.5);</span><br><span class="line">        ctx.strokeStyle=&apos;blue&apos;</span><br><span class="line">        ctx.stroke()</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ctx.strokeStyle=<span class="string">'red'</span></span><br><span class="line"><span class="comment">//平行线</span></span><br><span class="line">ctx.moveTo(<span class="number">50</span>, <span class="number">50.5</span>);</span><br><span class="line">ctx.lineTo(<span class="number">200</span>, <span class="number">50.5</span>)</span><br><span class="line">ctx.moveTo(<span class="number">50</span>, <span class="number">80.5</span>);</span><br><span class="line">ctx.lineTo(<span class="number">200</span>, <span class="number">80.5</span>);</span><br><span class="line">ctx.stroke()</span><br><span class="line">ctx.beginPath()</span><br><span class="line"><span class="comment">//交叉线</span></span><br><span class="line">ctx.moveTo(<span class="number">50</span>, <span class="number">100.5</span>);</span><br><span class="line">ctx.lineTo(<span class="number">200</span>, <span class="number">110.5</span>);</span><br><span class="line">ctx.moveTo(<span class="number">50</span>, <span class="number">110.5</span>);</span><br><span class="line">ctx.lineTo(<span class="number">200</span>, <span class="number">100.5</span>);</span><br><span class="line">ctx.strokeStyle=<span class="string">'blue'</span></span><br><span class="line">ctx.stroke()</span><br></pre></td></tr></table></figure>
 
 <p>效果图</p>
-<img src="/.git//07/30/canvas/pingxing.png" title="This is an example image">
+<img src="/2019/07/30/canvas/Snipaste.jpg" title="平行和交叉">
+
+<p>在上述例子中可以看出，stroke（）方法是进行线条的连接的，并且可以设置样式为红色通过strokeStyle,还可以发现同时设置两种颜色都可以展示出来，这就是beginPath（）方法的作用</p>
+<p>4.运用canvas绘制一个三角形</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//三角形</span></span><br><span class="line">       ctx.moveTo(<span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line">       ctx.lineTo(<span class="number">50</span>, <span class="number">100.5</span>);</span><br><span class="line">       ctx.lineTo(<span class="number">200</span>, <span class="number">75.5</span>);</span><br><span class="line">       ctx.strokeStyle=<span class="string">'blue'</span></span><br><span class="line">       ctx.lineWidth=<span class="number">2</span></span><br><span class="line">       ctx.fillStyle=<span class="string">'#668204'</span></span><br><span class="line">       ctx.closePath()</span><br><span class="line">       ctx.fill()</span><br><span class="line">      <span class="comment">// ctx.lineTo(50, 50);</span></span><br><span class="line">       ctx.stroke()</span><br></pre></td></tr></table></figure>
+
+<p>首先确定一个起点坐标，创建两个终点坐标，猜测是从起点到第一个终点，再将第一个终点当做起点到第二个终点，这样就可以解释为什么闭合三角形的那条线最终<br>指向了开始的起始点。还有方法closePath()会直接闭合。</p>
+
       
     </div>
     
@@ -381,7 +388,7 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
   <p><span>文章作者:</span><a href="/" title="访问 mark 的个人博客">mark</a></p>
-  <p><span>最后更新:</span>2019年07月29日 22:07:25</p>
+  <p><span>最后更新:</span>2019年07月30日 09:07:16</p>
   <p><span>原始链接:</span><a href="/2019/07/30/canvas/" title="canvas绘图">http://h5qianduan16.github.io/2019/07/30/canvas/</a></p>
   <p><span>版权声明:</span>本博客所有文章除特别声明外，均采用 <i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"> BY-NC-SA 3.0 许可协议</a>，转载请注明出处！</p>
 </div>
